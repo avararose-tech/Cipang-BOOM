@@ -12,7 +12,7 @@
   <!-- Navbar -->
   <nav class="bg-orange-500 text-white p-4 flex justify-between items-center fixed top-0 w-full z-50">
     <div class="flex items-center gap-2">
-      <img src="logo cipang.png" class="w-10 h-10 object-contain">
+      <img src="logo cipang.png" alt="" width="40" height="44">
       <h1 class="font-bold text-lg">CIPANG BOOM</h1>
     </div>
     <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
@@ -32,7 +32,7 @@
   </div>
 
   <!-- Hero -->
-  <section class="text-center py-8 bg-white shadow">
+  <section class="text-center py-8 bg-white shadow mt-16">
     <style>
       .carousel-img {
         height: 300px;
@@ -82,15 +82,6 @@
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
     <h2 class="text-xl md:text-2xl font-bold">Selamat Datang di Cipang</h2>
     <p class="text-gray-600">Pesan makanan favoritmu 🚀</p>
   </section>
@@ -101,133 +92,133 @@
       onkeyup="cariMenu()"
       class="w-full p-3 border rounded-xl shadow">
   </div>
-<!-- kategori -->
-      <div class="max-w-4xl mx-auto px-4 pb-2 flex gap-2 flex-wrap">
-        <button onclick="setkategori('all')" class="bg-gray-300 px-3 py-1 rounded">semua</button>
-        <button onclick="setkategori('cireng')" class="bg-gray-300 px-3 py-1 rounded">cireng</button>
-        <button onclick="setkategori('pangsit')" class="bg-gray-300 px-3 py-1 rounded">pangsit</button>
-
+  
+  <!-- kategori -->
+      <div class="max-w-4xl mx-auto px-4 pb-2 flex gap-2 flex-wrap relative z-10">
+        <button onclick="setKategori('all', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Semua</button>
+        <button onclick="setKategori('cireng', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Cireng</button>
+        <button onclick="setKategori('pangsit', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Pangsit</button>
       </div>
       
   <!-- menu -->
   <section id="menu" class="p-3 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
 
-  <div class="bg-white p-3 rounded-xl shadow text-center produk">
-    <img src="cireng kuah keju.jpeg"
-      class="w-full h-28 object-cover rounded-lg mb-2">
-    <h3 class="nama font-semibold text-sm">Cireng Kuah Keju</h3>
-    <p class="text-orange-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Cireng Kuah Keju', 10000)"
-      class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
-      Tambah
-    </button>
-  </div>
+    <div class="bg-white p-3 rounded-xl shadow text-center produk">
+      <img src="cireng kuah keju.jpeg"
+        class="w-full h-28 object-cover rounded-lg mb-2">
+      <h3 class="nama font-semibold text-sm">Cireng Kuah Keju</h3>
+      <p class="text-orange-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Cireng Kuah Keju', 10000)"
+        class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
+        Tambah
+      </button>
+    </div>
 
-  <div class="bg-white p-3 rounded-xl shadow text-center produk">
-    <img src="cireng chili oil.jpeg"
-      class="w-full h-28 object-cover rounded-lg mb-2">
-    <h3 class="nama font-semibold text-sm">Cireng Chili Oil</h3>
-    <p class="text-orange-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Cireng Chili Oil', 10000)"
-      class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
-      Tambah
-    </button>
-  </div>
+    <div class="bg-white p-3 rounded-xl shadow text-center produk">
+      <img src="cireng chili oil.jpeg"
+        class="w-full h-28 object-cover rounded-lg mb-2">
+      <h3 class="nama font-semibold text-sm">Cireng Chili Oil</h3>
+      <p class="text-orange-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Cireng Chili Oil', 10000)"
+        class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
+        Tambah
+      </button>
+    </div>
 
-  <div class="bg-white p-3 rounded-xl shadow text-center produk">
-    <img src="rujak cireng.jpeg"
-      class="w-full h-28 object-cover rounded-lg mb-2">
-    <h3 class="nama font-semibold text-sm">Rujak Cireng</h3>
-    <p class="text-orange-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Cireng Rujak', 10000)"
-      class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
-      Tambah
-    </button>
-  </div>
+    <div class="bg-white p-3 rounded-xl shadow text-center produk">
+      <img src="rujak cireng.jpeg"
+        class="w-full h-28 object-cover rounded-lg mb-2">
+      <h3 class="nama font-semibold text-sm">Rujak Cireng</h3>
+      <p class="text-orange-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Cireng Rujak', 10000)"
+        class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
+        Tambah
+      </button>
+    </div>
 
-  <div class="bg-white p-3 rounded-xl shadow text-center produk">
-    <img src="Pangsit Kuah keju.jpg"
-      class="w-full h-28 object-cover rounded-lg mb-2">
-    <h3 class="nama font-semibold text-sm">Pangsit Kuah Keju</h3>
-    <p class="text-orange-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Pangsit Kuah Keju', 10000)"
-      class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
-      Tambah
-    </button>
-  </div>
+    <div class="bg-white p-3 rounded-xl shadow text-center produk">
+      <img src="Pangsit Kuah keju.jpg"
+        class="w-full h-28 object-cover rounded-lg mb-2">
+      <h3 class="nama font-semibold text-sm">Pangsit Kuah Keju</h3>
+      <p class="text-orange-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Pangsit Kuah Keju', 10000)"
+        class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
+        Tambah
+      </button>
+    </div>
 
-  <div class="bg-white p-3 rounded-xl shadow text-center produk">
-    <img src="pangsit chili oil.jpeg"
-      class="w-full h-28 object-cover rounded-lg mb-2">
-    <h3 class="nama font-semibold text-sm">Pangsit Chili Oil</h3>
-    <p class="text-orange-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Pangsit Kuah Keju', 10000)"
-      class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
-      Tambah
-    </button>
-  </div>
+    <div class="bg-white p-3 rounded-xl shadow text-center produk">
+      <img src="pangsit chili oil.jpeg"
+        class="w-full h-28 object-cover rounded-lg mb-2">
+      <h3 class="nama font-semibold text-sm">Pangsit Chili Oil</h3>
+      <p class="text-orange-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Pangsit Kuah Keju', 10000)"
+        class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
+        Tambah
+      </button>
+    </div>
 
-  <div class="bg-white p-3 rounded-xl shadow text-center produk">
-    <img src="pangsit kuah cuko.jpg"
-      class="w-full h-28 object-cover rounded-lg mb-2">
-    <h3 class="nama font-semibold text-sm">Pangsit Kuah Cuko</h3>
-    <p class="text-orange-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Pangsit Kuah Cuko', 10000)"
-      class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
-      Tambah
-    </button>
-  </div>
+    <div class="bg-white p-3 rounded-xl shadow text-center produk">
+      <img src="pangsit kuah cuko.jpg"
+        class="w-full h-28 object-cover rounded-lg mb-2">
+      <h3 class="nama font-semibold text-sm">Pangsit Kuah Cuko</h3>
+      <p class="text-orange-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Pangsit Kuah Cuko', 10000)"
+        class="mt-2 w-full bg-orange-500 text-white py-1 rounded-lg text-sm">
+        Tambah
+      </button>
+    </div>
 
-</section>
+  </section>
 
   <!-- MENU -->
-<section id="menu" class="p-3 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
+  <section id="menu" class="p-3 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
 
-  <!-- cireng -->
-  <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
-    <img src="cireng kuah keju.jpeg" class="w-full h-28 object-cover rounded mb-2">
-    <h3 class="nama font-semibold text-sm">cireng kuah keju</h3>
-    <p class="text-green-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('cireng kuah keju',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
-  </div>
+    <!-- cireng -->
+    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
+      <img src="cireng kuah keju.jpeg" class="w-full h-28 object-cover rounded mb-2">
+      <h3 class="nama font-semibold text-sm">cireng kuah keju</h3>
+      <p class="text-green-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('cireng kuah keju',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
+    </div>
 
-  <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
-    <img src="cireng chili oil.jpeg" class="w-full h-28 object-cover rounded mb-2">
-    <h3 class="nama font-semibold text-sm">cireng Chili Oil</h3>
-    <p class="text-green-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('cireng Chili Oil',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
-  </div>
+    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
+      <img src="cireng chili oil.jpeg" class="w-full h-28 object-cover rounded mb-2">
+      <h3 class="nama font-semibold text-sm">cireng Chili Oil</h3>
+      <p class="text-green-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('cireng Chili Oil',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
+    </div>
 
-  <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
-    <img src="rujak cireng.jpeg" class="w-full h-28 object-cover rounded mb-2">
-    <h3 class="nama font-semibold text-sm">Rujak Cireng</h3>
-    <p class="text-green-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Rujak Cireng',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
-  </div>
+    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
+      <img src="rujak cireng.jpeg" class="w-full h-28 object-cover rounded mb-2">
+      <h3 class="nama font-semibold text-sm">Rujak Cireng</h3>
+      <p class="text-green-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Rujak Cireng',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
+    </div>
 
-  <!-- pangsit -->
-  <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
-    <img src="Pangsit Kuah keju.jpg" class="w-full h-28 object-cover rounded mb-2">
-    <h3 class="nama font-semibold text-sm">Pangsit Kuah Keju</h3>
-    <p class="text-green-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('pangsit kuah keju',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
-  </div>
+    <!-- pangsit -->
+    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
+      <img src="Pangsit Kuah keju.jpg" class="w-full h-28 object-cover rounded mb-2">
+      <h3 class="nama font-semibold text-sm">Pangsit Kuah Keju</h3>
+      <p class="text-green-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('pangsit kuah keju',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
+    </div>
 
-  <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
-    <img src="pangsit chili oil.jpeg" class="w-full h-28 object-cover rounded mb-2">
-    <h3 class="nama font-semibold text-sm">Pangsit Chili Oil</h3>
-    <p class="text-green-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Pangsit Chili Oil',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
-  </div>
+    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
+      <img src="pangsit chili oil.jpeg" class="w-full h-28 object-cover rounded mb-2">
+      <h3 class="nama font-semibold text-sm">Pangsit Chili Oil</h3>
+      <p class="text-green-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Pangsit Chili Oil',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
+    </div>
 
-  <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
-    <img src="pangsit kuah cuko.jpg" class="w-full h-28 object-cover rounded mb-2">
-    <h3 class="nama font-semibold text-sm">Pangsit Kuah Cuko</h3>
-    <p class="text-green-600 font-bold text-sm">Rp10000</p>
-    <button onclick="tambahKeKeranjang('Pangsit kuah Cuko',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
-  </div>
+    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
+      <img src="pangsit kuah cuko.jpg" class="w-full h-28 object-cover rounded mb-2">
+      <h3 class="nama font-semibold text-sm">Pangsit Kuah Cuko</h3>
+      <p class="text-green-600 font-bold text-sm">Rp10000</p>
+      <button onclick="tambahKeKeranjang('Pangsit kuah Cuko',10000)" class="mt-2 w-full bg-green-500 text-white py-1 rounded">Tambah</button>
+    </div>
 
-</section>
+  </section>
 
   <!-- Keranjang -->
   <div class="max-w-xl mx-auto bg-white p-4 rounded-xl shadow mt-6">
@@ -315,18 +306,30 @@
       }
     }
 
-    function setkategori(kategori) {
-      let produk = document.getElementsByClassName("produk");
+    function setKategori(kategori, el) {
+      let semuaProduk = document.getElementsByClassName("produk");
 
-      for (let i = 0; i < produk.length; i++) {
-        let kategoriProduk = produk[i].getAttribute("data-kategori");
+      // FILTER PRODUK
+      for (let i = 0; i < semuaProduk.length; i++) {
+        let kat = semuaProduk[i].getAttribute("data-kategori");
 
-        if (kategori === "all" || kategoriProduk === kategori) {
-          produk[i].style.display = "block";
+        if (kategori === "all" || kat === kategori) {
+          semuaProduk[i].style.display = "block";
         } else {
-          produk[i].style.display = "none";
+          semuaProduk[i].style.display = "none";
         }
       }
+
+      // RESET WARNA SEMUA BUTTON
+      let semuaBtn = document.getElementsByClassName("kategori-btn");
+      for (let i = 0; i < semuaBtn.length; i++) {
+        semuaBtn[i].classList.remove("bg-orange-500", "text-white");
+        semuaBtn[i].classList.add("bg-gray-300");
+      }
+
+      // AKTIFKAN YANG DIKLIK
+      el.classList.remove("bg-gray-300");
+      el.classList.add("bg-orange-500", "text-white");
     }
 
     function kirimWA() {
