@@ -13,7 +13,7 @@
   <nav class="bg-orange-500 text-white p-4 flex justify-between items-center fixed top-0 w-full z-50">
     <div class="flex items-center gap-2">
       <img src="logo cipang.png" class="w-10 h-10 object-contain">
-      <h1 class="font-bold text-lg">CIPANG BOOM</h1>
+      <h1 class="font-bold text-lg">CIPANG BOOM1234</h1>
     </div>
     <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
       <div class="hidden md:flex space-x-4">
