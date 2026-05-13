@@ -103,9 +103,9 @@
   </div>
 <!-- kategori -->
       <div class="max-w-4xl mx-auto px-4 pb-2 flex gap-2 flex-wrap">
-        <button onclick="setkategori('all')" class="bg-gray-300 px-3 py-1 rounded">semua</button>
-        <button onclick="setkategori('cireng')" class="bg-gray-300 px-3 py-1 rounded">cireng</button>
-        <button onclick="setkategori('pangsit')" class="bg-gray-300 px-3 py-1 rounded">pangsit</button>
+        <button onclick="setkategori('all')" class="bg-gray-300 px-3 py-1 rounded">Semua</button>
+        <button onclick="setkategori('cireng')" class="bg-gray-300 px-3 py-1 rounded">Cireng</button>
+        <button onclick="setkategori('pangsit')" class="bg-gray-300 px-3 py-1 rounded">Pangsit</button>
 
       </div>
       
