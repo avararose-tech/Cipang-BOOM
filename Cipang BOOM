@@ -94,7 +94,6 @@
   <!-- kategori -->
       <div class="max-w-4xl mx-auto px-4 pb-2 flex gap-2 flex-wrap relative z-10">
         <button onclick="setKategori('all', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">All</button>
-        <button onclick="setKategori('bundling', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Bundling</button>
         <button onclick="setKategori('cireng', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Cireng</button>
         <button onclick="setKategori('pangsit', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Pangsit</button>
       </div>
