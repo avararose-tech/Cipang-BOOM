@@ -21,7 +21,6 @@
         <a href="#">Home</a>
         <a href="#menu">Menu</a>
         <a href="#order">Pesan</a>
-        <a href="#promo">Menu Paket</a>
       </div>
   </nav>
 
@@ -29,7 +28,6 @@
   <div id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-orange-400 text-white p-4 z-50 md:hidden">
     <a href="#menu" class="block mb-2">Menu</a>
     <a href="#order" class="block mb-2">Pesan</a>
-    <a href="#promo" class="block mb-2">Menu Paket</a>
   </div>
 
   <!-- Hero -->
@@ -101,24 +99,6 @@
         <button onclick="setKategori('pangsit', this)" class="kategori-btn bg-gray-300 px-3 py-1 rounded transition hover:bg-orange-300">Pangsit</button>
       </div>
 
-  <!-- MENU PAKET -->
-  <section id="promo" class="p-3 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
-    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="bundling">
-      <img src="poster paket huhah.jpeg" class="w-full h-32 md:h-28 object-cover rounded mb-2">
-      <h3 class="nama font-semibold text-sm">Paket HUHAHH</h3>
-      <h5>Mie Jeletot + Pangsit Chili Oil</h5>
-      <p class="text-orange-600 font-bold text-sm harga" data-harga="18000"></p>
-      <button onclick="tambahKeKeranjang('Paket HUHAHH',18000)" class="mt-2 w-full bg-orange-500 text-white py-1 rounded text-sm">Tambah</button>
-    </div>
-    <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="bundling">
-      <img src="paket gacor.png" class="w-full h-32 md:h-28 object-cover rounded mb-2">
-      <h3 class="nama font-semibold text-sm">Paket Gacor</h3>
-      <h5>Cireng Kuah Keju + Lemon Tea</h5>
-      <p class="text-orange-600 font-bold text-sm harga" data-harga="18000"></p>
-      <button onclick="tambahKeKeranjang('Paket Gacor',18000)" class="mt-2 w-full bg-orange-500 text-white py-1 rounded text-sm">Tambah</button>
-    </div>
-  </section>
-      
     <!-- Menu -->
   <section id="menu" class="p-3 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
     <!-- cireng -->
@@ -139,6 +119,7 @@
     <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="cireng">
       <img src="rujak cireng.jpeg" class="w-full h-32 md:h-28 object-cover rounded mb-2">
       <h3 class="nama font-semibold text-sm">Cireng Rujak</h3>
+      <h5>Isi 5</h5>
       <p class="text-orange-600 font-bold text-sm harga" data-harga="10000"></p>
       <button onclick="tambahKeKeranjang('Cireng Rujak',10000)" class="mt-2 w-full bg-orange-500 text-white py-1 rounded text-sm">Tambah</button>
     </div>
@@ -148,7 +129,7 @@
       <h3 class="nama font-semibold text-sm">Pangsit Kuah Keju</h3>
       <h5>Isi 4</h5>
       <p class="text-orange-600 font-bold text-sm harga" data-harga="10000"></p>
-      <button onclick="tambahKeKeranjang('pangsit kuah keju',10000)" class="mt-2 w-full bg-orange-500 text-white py-1 rounded text-sm">Tambah</button>
+      <button onclick="tambahKeKeranjang('Pangsit Kuah Keju',10000)" class="mt-2 w-full bg-orange-500 text-white py-1 rounded text-sm">Tambah</button>
     </div>
     <div class="produk bg-white p-3 rounded-xl shadow text-center" data-kategori="pangsit">
       <img src="pangsit chili oil.jpeg" class="w-full h-32 md:h-28 object-cover rounded mb-2">
@@ -178,7 +159,6 @@
     <h2 class="text-lg font-bold mb-4 text-center">Form Pemesanan</h2>
 
     <input id="nama" type="text" placeholder="Nama" class="w-full mb-3 p-3 border rounded">
-    <input id="meja" type="text" placeholder="Nomor Meja" class="w-full mb-3 p-3 border rounded">
     <input id="catatan" type="text" placeholder="Catatan (opsional)" class="w-full mb-3 p-3 border rounded">
 
     <button onclick="kirimWA()" class="w-full bg-orange-500 text-white py-3 rounded-lg text-lg">
@@ -202,122 +182,19 @@
     </div>
   </div>
 
-  <!-- Modal Pilihan -->
-<div id="modalPilihan" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
-  <div class="bg-white w-80 p-5 rounded-xl shadow-lg">
-
-    <h2 class="text-lg font-bold mb-3 text-center" id="judulMenu">
-      Pilih Menu
-    </h2>
-
-    <!-- Isi -->
-    <label class="font-semibold text-sm">Pilihan Isi</label>
-    <select id="pilihanIsi" class="w-full border p-2 rounded mb-3">
-      <option value="Ayam">Ayam</option>
-      <option value="Keju">Keju</option>
-      <option value="Mix">Mix</option>
-    </select>
-
-    <!-- Level -->
-    <label class="font-semibold text-sm">Level Pedas</label>
-    <select id="pilihanLevel" class="w-full border p-2 rounded mb-3">
-      <option value="Tidak Pedas">Tidak Pedas</option>
-      <option value="Level 1">Level 1</option>
-      <option value="Level 2">Level 2</option>
-      <option value="Level 3">Level 3</option>
-      <option value="Level 4">Level 4</option>
-      <option value="Level 5">Level 5</option>
-    </select>
-
-    <!-- Catatan -->
-    <label class="font-semibold text-sm">Catatan</label>
-    <input type="text" id="pilihanCatatan"
-      class="w-full border p-2 rounded mb-4"
-      placeholder="Opsional">
-
-    <button onclick="simpanPilihan()"
-      class="w-full bg-orange-500 text-white py-2 rounded mb-2">
-      Tambahkan
-    </button>
-
-    <button onclick="tutupModalPilihan()"
-      class="w-full bg-gray-300 py-2 rounded">
-      Batal
-    </button>
-
-  </div>
-</div>
-
-  <!-- JS -->
-  <script>
+ <!-- JS -->
+   <script>
     let keranjang = [];
-    let menuDipilih = null;
 
     function toggleMenu() {
       document.getElementById("mobileMenu").classList.toggle("hidden");
     }
 
-    function bukaModalPilihan(nama, harga) {
-    menuDipilih = { nama, harga };
-
-    document.getElementById("judulMenu").innerText = nama;
-
-    document.getElementById("modalPilihan").classList.remove("hidden");
-    document.getElementById("modalPilihan").classList.add("flex");
-    }
-
-    function tutupModalPilihan() {
-    document.getElementById("modalPilihan").classList.add("hidden");
-
-    document.getElementById("pilihanIsi").value = "Ayam";
-    document.getElementById("pilihanLevel").value = "Tidak Pedas";
-    document.getElementById("pilihanCatatan").value = "";
-    }
-
-    function simpanPilihan() {
-
-    let isi = document.getElementById("pilihanIsi").value;
-    let level = document.getElementById("pilihanLevel").value;
-    let catatan = document.getElementById("pilihanCatatan").value;
-
-    let item = {
-        nama: menuDipilih.nama,
-        harga: menuDipilih.harga,
-        isi: isi,
-        level: level,
-        catatan: catatan,
-        qty: 1
-    };
-
-    keranjang.push(item);
-
-    renderKeranjang();
-    tutupModalPilihan();
-    }
-
     function tambahKeKeranjang(nama, harga) {
-
-    let item = keranjang.find(
-        p =>
-        p.nama === nama &&
-        p.isi === "-" &&
-        p.level === "-"
-    );
-
-    if (item) {
-        item.qty++;
-    } else {
-        keranjang.push({
-        nama,
-        harga,
-        isi: "-",
-        level: "-",
-        catatan: "-",
-        qty: 1
-        });
-    }
-
-    renderKeranjang();
+      let item = keranjang.find(p => p.nama === nama);
+      if (item) item.qty++;
+      else keranjang.push({ nama, harga, qty: 1 });
+      renderKeranjang();
     }
 
     function renderKeranjang() {
@@ -330,19 +207,9 @@
         total += subtotal;
 
         list.innerHTML += `
-          <li class="flex justify-between mb-3 border-b pb-2">
-            <div>
-                <b>${item.nama}</b> (${item.qty})<br>
-                <small>
-                    Isi: ${item.isi}<br>
-                    Level: ${item.level}<br>
-                    Catatan: ${item.catatan || "-"}
-                </small>
-                </div>
-
-                <div>
-                Rp${subtotal.toLocaleString('id-ID')}
-                <button onclick="hapusItem(${index})" class="text-red-500 ml-2">❌</button>
+          <li class="flex justify-between mb-1">
+            ${item.nama} (${item.qty}) - Rp${subtotal.toLocaleString('id-ID')}
+            <button onclick="hapusItem(${index})" class="text-red-500">❌</button>
           </li>
         `;
       });
@@ -393,11 +260,10 @@
 
     function kirimWA() {
       let nama = document.getElementById("nama").value;
-      let meja = document.getElementById("meja").value;
       let catatan = document.getElementById("catatan").value;
 
 
-      if (!nama || !meja || keranjang.length === 0) {
+      if (!nama || keranjang.length === 0) {
         alert("Isi semua data dulu!");
         return;
       }
@@ -405,7 +271,7 @@
       let struk = document.getElementById("strukContent");
       let total = 0;
 
-      struk.innerHTML = `<p>Nama: ${nama}</p><p>Meja: ${meja}</p><p>Catatan: ${catatan}</p><hr class="my-2">`;
+      struk.innerHTML = `<p>Nama: ${nama}</p><p>Catatan: ${catatan}</p><hr class="my-2">`;
 
       keranjang.forEach(item => {
         let subtotal = item.harga * item.qty;
@@ -420,20 +286,13 @@
 
     function kirimWAFix() {
       let nama = document.getElementById("nama").value;
-      let meja = document.getElementById("meja").value;
       let catatan= document.getElementById("catatan").value;
       let nomor = "6282226789635";
 
-      let pesan = `Halo, saya ${nama} (Meja ${meja}) ingin pesan:\n`;
+      let pesan = `Halo, saya ${nama} ingin pesan:\n`;
 
       keranjang.forEach(item => {
         pesan += `- ${item.nama} x${item.qty}\n`;
-        pesan += `  Isi: ${item.isi}\n`;
-        pesan += `  Level: ${item.level}\n`;
-
-        if(item.catatan){
-        pesan += `  Catatan: ${item.catatan}\n`;
-        }
       });
 
       if (catatan) {
@@ -450,7 +309,6 @@
       keranjang = [];
       renderKeranjang();
       document.getElementById("nama").value = "";
-      document.getElementById("meja").value = "";
       document.getElementById("catatan").value = "";
       tutupStruk();
     }
